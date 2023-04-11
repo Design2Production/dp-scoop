@@ -1,1 +1,1 @@
-# dp-scoop
+# scoop
