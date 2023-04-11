@@ -22,7 +22,7 @@ On Both PCs:
 
 2. Download the install script
 <pre>
-Invoke-WebRequest -Uri https://design2production.github.io/scoop/NewInstallRemoteCommandRunner.ps1 -OutFile NewInstallRemoteCommandRunner.ps1
+Invoke-WebRequest -Uri https://design2production.github.io/dp-scoop/NewInstallRemoteCommandRunner.ps1 -OutFile NewInstallRemoteCommandRunner.ps1
 </pre>
 
 > If the installation script fails with:

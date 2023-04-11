@@ -18,7 +18,7 @@ Ensure the Ethernet connection to the switch (connected to the internet) is made
 
 2. Download the install script for a NEW installation
 <pre>
-Invoke-WebRequest -Uri https://design2production.github.io/scoop/NewInstallDeviceProxy.ps1 -OutFile NewInstallDeviceProxy.ps1
+Invoke-WebRequest -Uri https://design2production.github.io/dp-scoop/NewInstallDeviceProxy.ps1 -OutFile NewInstallDeviceProxy.ps1
 </pre>
 
 > If the installation script fails with:

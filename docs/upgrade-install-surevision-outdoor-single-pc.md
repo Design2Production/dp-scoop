@@ -18,7 +18,7 @@ Ensure the Ethernet connection to the switch (connected to the internet) is made
 
 2. Download the install script to UPGRADE an old installation
 <pre>
-Invoke-WebRequest -Uri https://design2production.github.io/scoop/UpgradeInstallDeviceProxy.ps1 -OutFile UpgradeInstallDeviceProxy.ps1
+Invoke-WebRequest -Uri https://design2production.github.io/dp-scoop/UpgradeInstallDeviceProxy.ps1 -OutFile UpgradeInstallDeviceProxy.ps1
 </pre>
 
 > If the installation script fails with:

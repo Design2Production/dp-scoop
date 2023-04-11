@@ -2,7 +2,7 @@
 
 1. Download the uninstall script
 <pre>
-Invoke-WebRequest -Uri https://design2production.github.io/scoop/UnInstallDeviceProxy.ps1 -OutFile UnInstallDeviceProxy.ps1
+Invoke-WebRequest -Uri https://design2production.github.io/dp-scoop/UnInstallDeviceProxy.ps1 -OutFile UnInstallDeviceProxy.ps1
 </pre>
 
 > If the installation script fails with:

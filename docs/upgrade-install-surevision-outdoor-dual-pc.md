@@ -11,9 +11,9 @@ On Both PCs:
 
 ***The Remote command runner should ONLY be installed on the "Second" PC in a dual PC setup.***
 
-If setting up a new PC B installtion follow [these](https://design2production.github.io/scoop/new-rcr-install-surevision-outdoor-pc.html) instructions.
+If setting up a new PC B installtion follow [these](https://design2production.github.io/dp-scoop/new-rcr-install-surevision-outdoor-pc.html) instructions.
 
-If upgrading an old PC B installation follow [these](https://design2production.github.io/scoop/upgrade-rcr-install-surevision-outdoor-pc.html) instructions:
+If upgrading an old PC B installation follow [these](https://design2production.github.io/dp-scoop/upgrade-rcr-install-surevision-outdoor-pc.html) instructions:
 
 > During the installation script the IP Address of the unit will be reported. Note this IP address, as it is needed when installing the Device Proxy (see below).
 
@@ -29,7 +29,7 @@ If upgrading an old PC B installation follow [these](https://design2production.g
 
 2. Download the install script to UPGRADE an old installation
 <pre>
-Invoke-WebRequest -Uri https://design2production.github.io/scoop/UpgradeInstallDeviceProxy.ps1 -OutFile UpgradeInstallDeviceProxy.ps1
+Invoke-WebRequest -Uri https://design2production.github.io/dp-scoop/UpgradeInstallDeviceProxy.ps1 -OutFile UpgradeInstallDeviceProxy.ps1
 </pre>
 
 > If the installation script fails with:
