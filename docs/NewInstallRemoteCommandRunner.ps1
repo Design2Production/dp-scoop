@@ -1,7 +1,7 @@
 #Requires -RunAsAdministrator
 Set-PSDebug -Trace 0
 
-$repo = 'scoop'
+$repo = 'dp-scoop'
 
 if ($repo -eq 'scoop-dev')
 {
