@@ -8,7 +8,7 @@ Function SerialDisableDPEMSWatchDog
 
     $serialPortNames = [System.IO.Ports.SerialPort]::getportnames()
     $watchDogDisabled = $false
-    
+
     foreach ($serialPortName in $serialPortNames)
     {
         for ($i = 0; $i -lt 3; $i++)
@@ -32,11 +32,11 @@ Function SerialDisableDPEMSWatchDog
             catch
             {
                 Write-Output "Stop WatchDog Exception:$_.Exception.Message"
-            }    
+            }
             finally
             {
                 $port.Close()
-            }    
+            }
         }
         if ($watchDogDisabled -eq $true)
         {
@@ -62,18 +62,18 @@ Function NetworkDisableDPEMSWatchDog
         $body = @{
             'status' = 'false'
         } | ConvertTo-Json
-    
+
         $header = @{
             'Accept'       = 'application/json'
             'Content-Type' = 'application/json'
         }
-   
+
         Invoke-RestMethod -Uri "$postCommand" -Method 'Post' -Body $body -Headers $header | ConvertTo-Html | Out-Null
     }
     catch
     {
         Write-Output "Stop WatchDog Exception:$_.Exception.Message"
-    }    
+    }
 }
 
 Write-Output 'Uninstalling DeviceProxy'
@@ -103,4 +103,15 @@ scoop uninstall scoop $myshell.sendkeys('Y') $myshell.sendkeys('{ENTER}')
 Remove-Item -Recurse 'C:\scoop'
 Remove-Item -Recurse 'C:\serman'
 
+$taskName = 'DPUpdateDeviceProxy'
+$taskExists = Get-ScheduledTask | Where-Object { $_.TaskName -like $taskName }
+if ($taskExists)
+{
+    Unregister-ScheduledTask -TaskName "$taskName" -Confirm:$false 2>$null
+    Write-Output 'DPUpdateDeviceProxy Task removed successfully...'
+}
+else
+{
+    Write-Output 'No DPUpdateDeviceProxy task to remove...'
+}
 Write-Output 'DeviceProxy uninstallation complete'
